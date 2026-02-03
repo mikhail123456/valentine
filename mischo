@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>💖 Valentine</title>
+<style>
+body {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  background: linear-gradient(135deg, pink, hotpink);
+  font-family: Arial;
+  text-align:center;
+}
+button {
+  padding:15px 30px;
+  font-size:18px;
+  margin:10px;
+  border:none;
+  border-radius:10px;
+}
+#no {
+  position:absolute;
+}
+</style>
+</head>
+<body>
+
+<h1>Veux-tu être ma Valentine ? 💘</h1>
+
+<button onclick="alert('Je savais que tu dirais oui 😍💖')">Oui</button>
+<button id="no" onmouseover="move()">Non</button>
+
+<script>
+function move(){
+  const x = Math.random() * (window.innerWidth - 120);
+  const y = Math.random() * (window.innerHeight - 60);
+  const no = document.getElementById("no");
+  no.style.left = x + "px";
+  no.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
