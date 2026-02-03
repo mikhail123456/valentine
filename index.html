@@ -758,8 +758,11 @@
     function openModal(){
       overlay.style.display = 'flex';
       startConfetti();
-      // 👉 Option musique: décommente si tu mets un fichier mp3 (voir plus bas)
-      // playMusic();
+      const panelRight = document.querySelector('.panel-right');
+    if(panelRight){
+    panelRight.style.display = 'flex';
+    panelRight.style.animation = 'fadeInUp 0.6s ease';
+      }
     }
     function closeModal(){
       overlay.style.display = 'none';
